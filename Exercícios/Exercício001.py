@@ -1,0 +1,5 @@
+print('Informe o seu nome')
+nome = input()
+print('Informe a sua idade')
+idade = int(input())
+print('Seu nome é {} e sua idade é {}'.format(nome, idade))
