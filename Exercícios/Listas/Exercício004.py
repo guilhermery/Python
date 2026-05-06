@@ -1,13 +1,16 @@
 numeros = []
-for c in range(5):
-    valor = int(input('Digite um valor: '))
-    if len(numeros) == 0:
-        numeros.insert(0, valor)
+for c in range(0, 5):
+    n = int(input('Digite um valor: '))
+    if c == 0:
+        numeros.append(n)
+    elif n > numeros[len(numeros)-1]:
+        numeros.append(n)
     else:
-        for pos in range(len(numeros)):
-            if valor <= numeros[pos]:
-                numeros.insert(pos, valor)
+        pos = 0
+        while pos < len(numeros):
+            if n <= numeros[pos]:
+                numeros.insert(pos, n)
                 break
-            if pos == len(numeros) - 1:
-                numeros.insert(len(numeros), valor)
-print(numeros)
+            pos += 1
+print('-='*30)
+print(f'Os valores digitados em ordem crescente foram: {numeros}')
