@@ -5,9 +5,9 @@ while True:
         num.append(valor)
         print('Valor adicionado com sucesso!')
     else:
-        print('Valor duplicado! Não será adicionado.')
-    resp = input('Deseja continuar? [S/N] ').upper()
-    if resp == 'N':
+        print('Valor duplicado! Não vou adicionar.')
+    resp = str(input('Deseja continuar? [S/N] '))
+    if resp in 'Nn':
         break
 num.sort()
 print('-='*30)
