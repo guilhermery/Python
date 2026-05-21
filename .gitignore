@@ -1,4 +1,4 @@
 testeignorar.txt
 .gitignore.txt
-./.venv
-./.idea
+.venv
+.idea
