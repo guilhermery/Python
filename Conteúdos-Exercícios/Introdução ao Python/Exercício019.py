@@ -11,5 +11,3 @@ print('Vídeo' in frase) #retorna boolean, verdadeiro ou falso.
 print(frase.find('Curso')) #retorna o primeiro número dessa palavra vídeo.
 dividido = frase.split() #Atribui uma lista das palavras da frase a variavel dividido.
 print(dividido[0][2]) #Pega a palavra curso e mostra o terceiro caractere.
-
-

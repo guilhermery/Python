@@ -1,7 +1,0 @@
-É possível adicionar lista dentro de lista da seguinte forma:
-dados = ['Pedro', 25].
-pessoas.append(dados).
-Isso faz com que a lista pessoas receba no primeiro indice 0, a lista dados
-Posso dar print das formas:
-- print(pessoas[0]) que irá sair ['Pedro', 25].
-- Ou: print(pessoas[0][0]) que irá sair Pedro.
