@@ -21,7 +21,7 @@ Durante os exercícios deste conteúdo foram utilizados:
 - conversão numérica
 - formatação com cores ANSI
 
-Esses exercícios ajudaram no desenvolvimento da lógica de decisão em cenários mais complexos, onde o programa precisa analisar várias possibilidades diferentes antes de chegar ao resultado final. Em algum momento toda aplicação vira uma sequência gigantesca de “e se isso acontecer?”. Programação é essencialmente ansiedade automatizada.
+Esses exercícios ajudaram no desenvolvimento da lógica de decisão em situações mais complexas, exigindo que o programa analisasse diferentes condições antes de definir o resultado final. Isso contribuiu para uma melhor compreensão das estruturas condicionais e da tomada de decisão na programação.
 
 ---
 
