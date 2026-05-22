@@ -29,24 +29,24 @@ Durante os exercícios deste conteúdo foram utilizados:
 - laços `for`
 - funções como `sorted()` e `enumerate()`
 
-Os dicionários são extremamente importantes porque permitem organizar dados de maneira mais clara e estruturada. Basicamente o cérebro do Python percebeu que listas sozinhas viravam caos rapidamente e decidiu criar algo mais civilizado.
+Os dicionários são estruturas que permitem armazenar dados de forma organizada por meio de chaves e valores, facilitando o acesso e a manipulação das informações de maneira mais clara e eficiente.
 
 ---
 
 # Índice
 
-- [Exercício001](#exercício001)
-- [Exercício002](#exercício002)
-- [Exercício003](#exercício003)
-- [Exercício004](#exercício004)
-- [Exercício005](#exercício005)
-- [Exercício006](#exercício006)
-- [Exercício007](#exercício007)
-- [Exercício008](#exercício008)
+- [Exercício001](#exercício-001)
+- [Exercício002](#exercício-002)
+- [Exercício003](#exercício-003)
+- [Exercício004](#exercício-004)
+- [Exercício005](#exercício-005)
+- [Exercício006](#exercício-006)
+- [Exercício007](#exercício-007)
+- [Exercício008](#exercício-008)
 
 ---
 
-# Exercício001
+# Exercício 001
 
 [Ver código](./Exercício001.py)
 
@@ -91,7 +91,7 @@ Esse exercício ajudou no aprendizado da estrutura básica dos dicionários e na
 
 ---
 
-# Exercício002
+# Exercício 002
 
 [Ver código](./Exercício002.py)
 
@@ -128,7 +128,7 @@ Esse exercício ajudou na compreensão de estruturas compostas, muito utilizadas
 
 ---
 
-# Exercício003
+# Exercício 003
 
 [Ver código](./Exercício003.py)
 
@@ -169,7 +169,7 @@ Esse exercício foi importante para:
 
 ---
 
-# Exercício004
+# Exercício 004
 
 [Ver código](./Exercício004.py)
 
@@ -203,7 +203,7 @@ Esse exercício ajudou no aprendizado de:
 
 ---
 
-# Exercício005
+# Exercício 005
 
 [Ver código](./Exercício005.py)
 
@@ -251,7 +251,7 @@ Esse exercício ajudou no aprendizado de:
 
 ---
 
-# Exercício006
+# Exercício 006
 
 [Ver código](./Exercício006.py)
 
@@ -282,7 +282,7 @@ Esse exercício trabalhou:
 
 ---
 
-# Exercício007
+# Exercício 007
 
 [Ver código](./Exercício007.py)
 
@@ -325,7 +325,7 @@ Esse exercício foi importante para compreender:
 
 ---
 
-# Exercício008
+# Exercício 008
 
 [Ver código](./Exercício008.py)
 
