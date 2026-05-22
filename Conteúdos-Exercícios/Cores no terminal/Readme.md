@@ -36,19 +36,19 @@ Para limpar a formatação:
 \033[m
 ```
 
-Esse conteúdo ajudou a compreender como personalizar mensagens no terminal. Porque aparentemente programadores olham para texto puro e pensam “isso precisa urgentemente ficar amarelo fluorescente”.
+Esse conteúdo ajudou a entender como personalizar mensagens no terminal utilizando cores e estilos, deixando a exibição das informações mais organizada e destacada.
 
 ---
 
 # Índice
 
-- [Exercício001](#exercício001)
-- [Exercício002](#exercício002)
-- [Exercício003](#exercício003)
+- [Exercício001](#exercício-001)
+- [Exercício002](#exercício-002)
+- [Exercício003](#exercício-003)
 
 ---
 
-# Exercício001
+# Exercício 001
 
 [Ver código](./Exercício001.py)
 
@@ -88,7 +88,7 @@ Esse exercício ajudou no aprendizado de:
 
 ---
 
-# Exercício002
+# Exercício 002
 
 [Ver código](./Exercício002.py)
 
@@ -119,7 +119,7 @@ Esse exercício ajudou no aprendizado de:
 
 ---
 
-# Exercício003
+# Exercício 003
 
 [Ver código](./Exercício003.py)
 
