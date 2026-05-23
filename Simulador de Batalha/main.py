@@ -116,7 +116,7 @@ while True:
                 break
             else:
                 print('Informe uma resposta válida.')
-        if resposta == 'N':
+        if resposta in 'Nn':
             print('\033[32mBatalha encerrada.\033[m')
             break
         pokemonadv['hp'] = pokemonadv['hp'] - (pokemon['ataque'] * (100/(100+pokemonadv['defesa'])))
