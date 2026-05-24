@@ -137,7 +137,7 @@ while True:
             print('O Pokémon inimigo ataca primeiro!')
             time.sleep(1)
             pokemon['hp'] = attack.ataque(pokemon['hp'], pokemonadv['ataque'], pokemon['defesa'])
-            vivo = attack.vidaUsuario(pokemonadv['hp'])
+            vivo = attack.vidaUsuario(pokemon['hp'])
             if not vivo:
                 break
             while True:
