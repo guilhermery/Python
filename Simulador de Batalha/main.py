@@ -1,5 +1,6 @@
 import time
 import random
+from systems import attack
 Bulbasauro = {
     'nome': 'Bulbasauro',
     'ataque': 6,
@@ -23,6 +24,7 @@ Squirtle = {
 }
 espacamento = '---------------------------------------------------------'
 cont = 1
+vivo = True
 print('Escolha seu primeiro Pokémon!!')
 print(espacamento)
 print('\033[34mSquirtle\033[m')
@@ -74,40 +76,23 @@ while True:
             print('\033[32mBatalha encerrada.\033[m')
             break
         time.sleep(1)
-        pokemonadv['hp'] = pokemonadv['hp'] - (pokemon['ataque'] * (100/(100+pokemonadv['defesa'])))
-        if pokemonadv['hp'] <= 0:
-            print('O hp do inimigo desceu para 0.')
-            print('O Pokémon inimigo desmaiou! Você venceu. Parabens!!')
-            print('\033[32mBatalha encerrada.\033[m')
+        pokemonadv['hp'] = attack.ataque(pokemonadv['hp'], pokemon['ataque'], pokemonadv['defesa'])
+        vivo = attack.vidaInimigo(pokemonadv['hp'])
+        if not vivo:
             break
-        else:
-            print('O hp do inimigo desceu para {}'.format(int(pokemonadv['hp'])))
-            time.sleep(1)
         print('O Pokémon inimigo te ataca!')
         time.sleep(1)
-        pokemon['hp'] = pokemon['hp'] - (pokemonadv['ataque'] *(100/(100+pokemon['defesa'])))
-        if pokemon['hp'] <= 0:
-            print('O hp do seu Pokémon desceu para 0.')
-            time.sleep(1)
-            print('O seu Pokémon desmaiou! Você perdeu.')
-            print('\033[32mBatalha encerrada.\033[m')
+        pokemon['hp'] = attack.ataque(pokemon['hp'], pokemonadv['ataque'], pokemon['defesa'])
+        vivo = attack.vidaUsuario(pokemon['hp'])
+        if not vivo:
             break
-        else:
-            print('O hp do seu Pokémon desceu para {}'.format(int(pokemon['hp'])))
-            time.sleep(1)
     elif pokemonadv['velocidade'] > pokemon['velocidade']:
         print('O Pokémon inimigo ataca primeiro!')
         time.sleep(1)
-        pokemon['hp'] = pokemon['hp'] - (pokemonadv['ataque'] *(100/(100+pokemon['defesa'])))
-        if pokemon['hp'] <= 0:
-            print('O hp do seu Pokémon desceu para 0.')
-            time.sleep(1)
-            print('O seu Pokémon desmaiou! Você perdeu.')
-            print('\033[32mBatalha encerrada.\033[m')
+        pokemon['hp'] = attack.ataque(pokemon['hp'], pokemonadv['ataque'], pokemon['defesa'])
+        vivo = attack.vidaUsuario(pokemon['hp'])
+        if not vivo:
             break
-        else:
-            print('O hp do seu Pokémon desceu para {}'.format(int(pokemon['hp'])))
-            time.sleep(1)
         while True:
             resposta = input('O seu Pokémon ataca! Deseja continuar? (S/N) ')
             if resposta in 'Nn':
@@ -119,15 +104,10 @@ while True:
         if resposta in 'Nn':
             print('\033[32mBatalha encerrada.\033[m')
             break
-        pokemonadv['hp'] = pokemonadv['hp'] - (pokemon['ataque'] * (100/(100+pokemonadv['defesa'])))
-        if pokemonadv['hp'] <= 0:
-            print('O hp do inimigo desceu para 0.')
-            print('O Pokémon inimigo desmaiou! Você venceu. Parabens!!')
-            print('\033[32mBatalha encerrada.\033[m')
+        pokemonadv['hp'] = attack.ataque(pokemonadv['hp'], pokemon['ataque'], pokemonadv['defesa'])
+        vivo = attack.vidaInimigo(pokemonadv['hp'])
+        if not vivo:
             break
-        else:
-            print('O hp do inimigo desceu para {}'.format(int(pokemonadv['hp'])))
-            time.sleep(1)
     elif pokemon['velocidade'] == pokemonadv['velocidade']:
         n = random.randint(1, 2)
         if n == 1:
@@ -143,40 +123,23 @@ while True:
                 print('\033[32mBatalha encerrada.\033[m')
                 break
             time.sleep(1)
-            pokemonadv['hp'] = pokemonadv['hp'] - (pokemon['ataque']*(100/(100+pokemonadv['defesa'])))
-            if pokemonadv['hp'] <= 0:
-                print('O hp do inimigo desceu para 0.')
-                print('O Pokémon inimigo desmaiou! Você venceu. Parabens!!')
-                print('\033[32mBatalha encerrada.\033[m')
+            pokemonadv['hp'] = attack.ataque(pokemonadv['hp'], pokemon['ataque'], pokemonadv['defesa'])
+            vivo = attack.vidaInimigo(pokemonadv['hp'])
+            if not vivo:
                 break
-            else:
-                print('O hp do inimigo desceu para {}'.format(int(pokemonadv['hp'])))
-                time.sleep(1)
             print('O Pokémon inimigo te ataca!')
             time.sleep(1)
-            pokemon['hp'] = pokemon['hp'] - (pokemonadv['ataque']*(100/(100+pokemon['defesa'])))
-            if pokemon['hp'] <= 0:
-                print('O hp do seu Pokémon desceu para 0.')
-                time.sleep(1)
-                print('O seu Pokémon desmaiou! Você perdeu.')
-                print('\033[32mBatalha encerrada.\033[m')
+            pokemon['hp'] = attack.ataque(pokemon['hp'], pokemonadv['ataque'], pokemon['defesa'])
+            vivo = attack.vidaUsuario(pokemon['hp'])
+            if not vivo:
                 break
-            else:
-                print('O hp do seu Pokémon desceu para {}'.format(int(pokemon['hp'])))
-                time.sleep(1)
         else:
             print('O Pokémon inimigo ataca primeiro!')
             time.sleep(1)
-            pokemon['hp'] = pokemon['hp'] - (pokemonadv['ataque']*(100/(100+pokemon['defesa'])))
-            if pokemon['hp'] <= 0:
-                print('O hp do seu Pokémon desceu para 0.')
-                time.sleep(1)
-                print('O seu Pokémon desmaiou! Você perdeu.')
-                print('\033[32mBatalha encerrada.\033[m')
+            pokemon['hp'] = attack.ataque(pokemon['hp'], pokemonadv['ataque'], pokemon['defesa'])
+            vivo = attack.vidaUsuario(pokemonadv['hp'])
+            if not vivo:
                 break
-            else:
-                print('O hp do seu Pokémon desceu para {}'.format(int(pokemon['hp'])))
-                time.sleep(1)
             while True:
                 resposta = input('O seu Pokémon ataca! Deseja continuar? (S/N) ')
                 if resposta in 'Nn':
@@ -188,13 +151,8 @@ while True:
             if resposta in 'Nn':
                 print('\033[32mBatalha encerrada.\033[m')
                 break
-            pokemonadv['hp'] = pokemonadv['hp'] - (pokemon['ataque']*(100/(100+pokemonadv['defesa'])))
-            if pokemonadv['hp'] <= 0:
-                print('O hp do inimigo desceu para 0.')
-                print('O Pokémon inimigo desmaiou! Você venceu. Parabens!!')
-                print('\033[32mBatalha encerrada.\033[m')
+            pokemonadv['hp'] = attack.ataque(pokemonadv['hp'], pokemon['ataque'], pokemonadv['defesa'])
+            vivo = attack.vidaInimigo(pokemonadv['hp'])
+            if not vivo:
                 break
-            else:
-                print('O hp do inimigo desceu para {}'.format(int(pokemonadv['hp'])))
-                time.sleep(1)
     cont += 1
