@@ -10,7 +10,7 @@ def vidaUsuario(hp):
         print('\033[32mBatalha encerrada.\033[m')
         return False
     else:
-        print(f'O seu hp desceu para {hp}')
+        print(f'O seu hp desceu para {int(hp)}')
         time.sleep(1)
         return True
 
@@ -21,6 +21,23 @@ def vidaInimigo(hp):
         print('\033[32mBatalha encerrada.\033[m')
         return False
     else:
-        print(f'O hp do inimigo desceu para {hp}')
+        print(f'O hp do inimigo desceu para {int(hp)}')
         time.sleep(1)
         return True
+
+def continuar(frase):
+    resposta = input(frase)
+    if resposta in 'Nn':
+        return False
+    elif resposta in 'Ss':
+        return True
+    else:
+        return None
+
+def confirmar_ataque(frase):
+    while True:
+        continua = continuar(frase)
+        if continua in [True, False]:
+            return continua
+        else:
+            print('Informe uma resposta válida.')

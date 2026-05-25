@@ -64,15 +64,7 @@ while True:
     print(f'Round {cont}:')
     time.sleep(1)
     if pokemon['velocidade'] > pokemonadv['velocidade']:
-        while True:
-            resposta = input('O seu Pokémon ataca primeiro! Deseja continuar? (S/N) ')
-            if resposta in 'Nn':
-                break
-            elif resposta in 'Ss':
-                break
-            else:
-                print('Informe uma resposta válida.')
-        if resposta in 'Nn':
+        if not attack.confirmar_ataque('O seu Pokémon ataca primeiro! Deseja continuar? (S/N) '):
             print('\033[32mBatalha encerrada.\033[m')
             break
         time.sleep(1)
@@ -93,15 +85,7 @@ while True:
         vivo = attack.vidaUsuario(pokemon['hp'])
         if not vivo:
             break
-        while True:
-            resposta = input('O seu Pokémon ataca! Deseja continuar? (S/N) ')
-            if resposta in 'Nn':
-                break
-            elif resposta in 'Ss':
-                break
-            else:
-                print('Informe uma resposta válida.')
-        if resposta in 'Nn':
+        if not attack.confirmar_ataque('O seu Pokémon ataca! Deseja continuar? (S/N) '):
             print('\033[32mBatalha encerrada.\033[m')
             break
         pokemonadv['hp'] = attack.ataque(pokemonadv['hp'], pokemon['ataque'], pokemonadv['defesa'])
@@ -111,15 +95,7 @@ while True:
     elif pokemon['velocidade'] == pokemonadv['velocidade']:
         n = random.randint(1, 2)
         if n == 1:
-            while True:
-                resposta = input('O seu Pokémon ataca primeiro! Deseja continuar? (S/N) ')
-                if resposta in 'Nn':
-                    break
-                elif resposta in 'Ss':
-                    break
-                else:
-                    print('Informe uma resposta válida.')
-            if resposta in 'Nn':
+            if not attack.confirmar_ataque('O seu Pokémon ataca primeiro! Deseja continuar? (S/N) '):
                 print('\033[32mBatalha encerrada.\033[m')
                 break
             time.sleep(1)
@@ -140,15 +116,7 @@ while True:
             vivo = attack.vidaUsuario(pokemon['hp'])
             if not vivo:
                 break
-            while True:
-                resposta = input('O seu Pokémon ataca! Deseja continuar? (S/N) ')
-                if resposta in 'Nn':
-                    break
-                elif resposta in 'Ss':
-                    break
-                else:
-                    print('Informe uma resposta válida.')
-            if resposta in 'Nn':
+            if not attack.confirmar_ataque('O seu Pokémon ataca! Deseja continuar? (S/N) '):
                 print('\033[32mBatalha encerrada.\033[m')
                 break
             pokemonadv['hp'] = attack.ataque(pokemonadv['hp'], pokemon['ataque'], pokemonadv['defesa'])
