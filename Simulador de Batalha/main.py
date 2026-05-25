@@ -61,7 +61,7 @@ while True:
 print(espacamento)
 print('Início de Batalha')
 while True:
-    print('Round {}:'.format(cont))
+    print(f'Round {cont}:')
     time.sleep(1)
     if pokemon['velocidade'] > pokemonadv['velocidade']:
         while True:

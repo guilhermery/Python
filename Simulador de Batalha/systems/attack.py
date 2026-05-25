@@ -10,7 +10,7 @@ def vidaUsuario(hp):
         print('\033[32mBatalha encerrada.\033[m')
         return False
     else:
-        print('O seu hp desceu para {}'.format(int(hp)))
+        print(f'O seu hp desceu para {hp}')
         time.sleep(1)
         return True
 
@@ -21,6 +21,6 @@ def vidaInimigo(hp):
         print('\033[32mBatalha encerrada.\033[m')
         return False
     else:
-        print('O hp do inimigo desceu para {}'.format(int(hp)))
+        print(f'O hp do inimigo desceu para {hp}')
         time.sleep(1)
         return True
