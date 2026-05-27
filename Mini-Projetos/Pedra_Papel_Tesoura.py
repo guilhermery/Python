@@ -32,7 +32,7 @@ while True:
     if jogador1 in opcoes and jogador2 in opcoes:
         break
     else:
-        print('Um dos jogadores não escolheu uma opção válida. Jogem novamente.')
+        print('Um ou ambos os jogadores não escolheu uma opção válida. Joguem novamente.')
 
 print('\n              JO-KEN-PÔ!!!')
 print('=' * 42)
