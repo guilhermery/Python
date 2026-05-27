@@ -17,13 +17,6 @@ Pasta com conteúdos organizados por tema, contendo exercícios e README explica
 
 ---
 
-## 🧠 Estudos DSA
-Pasta utilizada para armazenar conteúdos, exercícios e projetos desenvolvidos durante o curso da DSA (Data Science Academy).
-
-🔗 [Acessar Estudos DSA](./EstudoDSA/Readme.md)
-
----
-
 ## ⚔️ Simulador de Batalha 
 Projeto desenvolvido em Python para praticar lógica de programação, modularização, funções e estruturas de dados através de batalhas Pokémon em terminal.
 
