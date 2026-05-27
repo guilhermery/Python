@@ -1,13 +1,13 @@
 vitoria = {
-    'PEDRA':'TESOURA',
-    'TESOURA':'PAPEL',
-    'PAPEL':'PEDRA'
+    'pedra':'tesoura',
+    'tesoura':'papel',
+    'papel':'pedra'
 }
 
 opcoes = {
-    'PEDRA': '🪨',
-    'PAPEL': '📄',
-    'TESOURA':'✂️'
+    'pedra': '🪨',
+    'papel': '📄',
+    'tesoura':'✂️'
 }
 
 print('=' * 42)
@@ -27,8 +27,8 @@ print('[ PEDRA ]  [ PAPEL ]  [ TESOURA ]')
 print('=' * 42)
 
 while True:
-    jogador1 = input('Jogador 1 faça sua jogada: ').upper()
-    jogador2 = input('Jogador 2 faça sua jogada: ').upper()
+    jogador1 = input('Jogador 1 faça sua jogada: ').replace(" ", "").lower()
+    jogador2 = input('Jogador 2 faça sua jogada: ').replace(" ", "").lower()
     if jogador1 in opcoes and jogador2 in opcoes:
         break
     else:
@@ -36,6 +36,8 @@ while True:
 
 print('\n              JO-KEN-PÔ!!!')
 print('=' * 42)
+print(f'O jogador 1 escolheu {jogador1}')
+print(f'O jogador 2 escolheu {jogador2}')
 print(f'{opcoes[jogador1]}  VS  {opcoes[jogador2]}')
 print('=' * 42)
 
