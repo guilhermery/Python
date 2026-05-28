@@ -1,4 +1,4 @@
-#Cria uma lista do quadrado dos numeros de 0 a 9
+#Cria uma lista do quadrado dos numeros de 0 a 8
 quadrados = [x ** 2 for x in range(9)]
 
 print(f'Lista de quadrados de 0 a 8: {quadrados}')
@@ -16,9 +16,15 @@ print(f'Dicionario de quadrados: {quadrados_dict}')
 quadrados_set = {x ** 2 for x in [1, 2, 2, 3, 3, 4, 5]}
 print(f'Conjuntos de quadrados: {quadrados_set}')
 
-#Generator expression
+#Generator expression (economiza memoria e cria valores sob demanda, que podem ser utilizados uma vez)
 gen = (x ** 2 for x in range(6))
-print(f'Generator: {gen}')
+#Exemplo: Da para fazer a soma de numeros quadrados com apenas uma linha:
+soma = sum(x**2 for x in range(9))
+#Exemplo2: Da para ler um arquivo grande com um generator:
+# linhas = (linha.strip() for linha in open("dados.txt"))
+#
+# for linha in linhas:
+#     print(linha)
 
 #Uma tupla com os quadrados dos numeros
 quadrados_tupla = tuple(x ** 2 for x in range(6))
