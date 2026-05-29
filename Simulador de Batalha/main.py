@@ -1,6 +1,8 @@
 import time
 import random
+
 from systems import attack
+escolhas = ['Bulbasauro', 'Charmander', 'Squirtle']
 Bulbasauro = {
     'nome': 'Bulbasauro',
     'ataque': 6,
@@ -22,6 +24,11 @@ Squirtle = {
     'velocidade': 3,
     'hp': 40.0
 }
+pokemons = {
+    'Charmander': Charmander,
+    'Squirtle': Squirtle,
+    'Bulbasauro': Bulbasauro
+}
 espacamento = '---------------------------------------------------------'
 cont = 1
 vivo = True
@@ -33,31 +40,14 @@ print('\033[32mBulbasauro\033[m')
 print(espacamento)
 while True:
     pokemon = input('Qual você deseja? ')
-    if pokemon == 'Squirtle':
-        pokemon = Squirtle.copy()
-        break
-    elif pokemon == 'Charmander':
-        pokemon = Charmander.copy()
-        break
-    elif pokemon == 'Bulbasauro':
-        pokemon = Bulbasauro.copy()
+    if pokemon in escolhas:
+        pokemon = pokemons[pokemon].copy()
         break
     else:
         print('Escolha um Pokémon válido!')
 print(espacamento)
-while True:
-    pokemonadv = input('Escolha o pokemon adversário: ')
-    if pokemonadv == 'Squirtle':
-        pokemonadv = Squirtle.copy()
-        break
-    elif pokemonadv == 'Charmander':
-        pokemonadv = Charmander.copy()
-        break
-    elif pokemonadv == 'Bulbasauro':
-        pokemonadv = Bulbasauro.copy()
-        break
-    else:
-        print('Escolha um Pokémon válido!')
+pokemonadv = pokemons[random.choice(escolhas)].copy()
+print(f'Adversário escolheu {pokemonadv["nome"]}')
 print(espacamento)
 print('Início de Batalha')
 while True:
