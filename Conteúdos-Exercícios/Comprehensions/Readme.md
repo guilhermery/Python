@@ -232,4 +232,4 @@ Esse exercício ajudou na compreensão de:
 - geração preguiçosa de dados (lazy evaluation)
 - economia de memória
 - diferenças entre listas e generators
-- conversão entre estruturas de dados
+- conversão entre estruturas de dados 
