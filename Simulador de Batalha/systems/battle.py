@@ -1,4 +1,5 @@
 import time
+from . import user_input
 def ataque_jogador(pokemon, pokemonadv):
     pokemonadv.hp = pokemonadv.hp - (pokemon.ataque * (100 / (100 + pokemonadv.defesa)))
     return vida_inimigo(pokemonadv.hp)
@@ -28,3 +29,32 @@ def vida_inimigo(hp):
         print(f'O hp do inimigo desceu para {int(hp)}')
         time.sleep(1)
         return True
+
+def turno_usuario_primeiro(pokemon, pokemonadv):
+    if not user_input.confirmar_ataque('O seu Pokémon ataca primeiro! Deseja continuar? (S/N) '):
+        print('\033[32mBatalha encerrada.\033[m')
+        return False
+    time.sleep(1)
+    vivo = ataque_jogador(pokemon, pokemonadv)
+    if not vivo:
+        return False
+    print('O Pokémon inimigo te ataca!')
+    time.sleep(1)
+    vivo = ataque_inimigo(pokemon, pokemonadv)
+    if not vivo:
+        return False
+    return vivo
+
+def turno_adversario_primeiro(pokemonadv, pokemon):
+    print('O Pokémon inimigo ataca primeiro!')
+    time.sleep(1)
+    vivo = ataque_inimigo(pokemon, pokemonadv)
+    if not vivo:
+        return False
+    if not user_input.confirmar_ataque('O seu Pokémon ataca! Deseja continuar? (S/N) '):
+        print('\033[32mBatalha encerrada.\033[m')
+        return False
+    vivo = ataque_jogador(pokemon, pokemonadv)
+    if not vivo:
+        return False
+    return vivo
