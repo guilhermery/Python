@@ -57,28 +57,24 @@ while True:
             print('\033[32mBatalha encerrada.\033[m')
             break
         time.sleep(1)
-        pokemonadv.hp = attack.ataque(pokemonadv.hp, pokemon.ataque, pokemonadv.defesa)
-        vivo = attack.vidaInimigo(pokemonadv.hp)
+        vivo = attack.ataque_jogador(pokemon, pokemonadv)
         if not vivo:
             break
         print('O Pokémon inimigo te ataca!')
         time.sleep(1)
-        pokemon.hp = attack.ataque(pokemon.hp, pokemonadv.ataque, pokemon.defesa)
-        vivo = attack.vidaUsuario(pokemon.hp)
+        vivo = attack.ataque_inimigo(pokemon, pokemonadv)
         if not vivo:
             break
     elif pokemonadv.velocidade > pokemon.velocidade:
         print('O Pokémon inimigo ataca primeiro!')
         time.sleep(1)
-        pokemon.hp = attack.ataque(pokemon.hp, pokemonadv.ataque, pokemon.defesa)
-        vivo = attack.vidaUsuario(pokemon.hp)
+        vivo = attack.ataque_inimigo(pokemon, pokemonadv)
         if not vivo:
             break
         if not attack.confirmar_ataque('O seu Pokémon ataca! Deseja continuar? (S/N) '):
             print('\033[32mBatalha encerrada.\033[m')
             break
-        pokemonadv.hp = attack.ataque(pokemonadv.hp, pokemon.ataque, pokemonadv.defesa)
-        vivo = attack.vidaInimigo(pokemonadv.hp)
+        vivo = attack.ataque_jogador(pokemon, pokemonadv)
         if not vivo:
             break
     elif pokemon.velocidade == pokemonadv.velocidade:
@@ -88,28 +84,24 @@ while True:
                 print('\033[32mBatalha encerrada.\033[m')
                 break
             time.sleep(1)
-            pokemonadv.hp = attack.ataque(pokemonadv.hp, pokemon.ataque, pokemonadv.defesa)
-            vivo = attack.vidaInimigo(pokemonadv.hp)
+            vivo = attack.ataque_jogador(pokemon, pokemonadv)
             if not vivo:
                 break
             print('O Pokémon inimigo te ataca!')
             time.sleep(1)
-            pokemon.hp = attack.ataque(pokemon.hp, pokemonadv.ataque, pokemon.defesa)
-            vivo = attack.vidaUsuario(pokemon.hp)
+            vivo = attack.ataque_inimigo(pokemon, pokemonadv)
             if not vivo:
                 break
         else:
             print('O Pokémon inimigo ataca primeiro!')
             time.sleep(1)
-            pokemon.hp = attack.ataque(pokemon.hp, pokemonadv.ataque, pokemon.defesa)
-            vivo = attack.vidaUsuario(pokemon.hp)
+            vivo = attack.ataque_inimigo(pokemon, pokemonadv)
             if not vivo:
                 break
             if not attack.confirmar_ataque('O seu Pokémon ataca! Deseja continuar? (S/N) '):
                 print('\033[32mBatalha encerrada.\033[m')
                 break
-            pokemonadv.hp = attack.ataque(pokemonadv.hp, pokemon.ataque, pokemonadv.defesa)
-            vivo = attack.vidaInimigo(pokemonadv.hp)
+            vivo = attack.ataque_jogador(pokemon, pokemonadv)
             if not vivo:
                 break
     cont += 1

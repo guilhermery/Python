@@ -1,7 +1,11 @@
 import time
-def ataque(hp, ataque, defesa, vivo=True):
-    hp = hp - (ataque * (100 / (100 + defesa)))
-    return hp
+def ataque_jogador(pokemon, pokemonadv):
+    pokemonadv.hp = pokemonadv.hp - (pokemon.ataque * (100 / (100 + pokemonadv.defesa)))
+    return vidaInimigo(pokemonadv.hp)
+
+def ataque_inimigo(pokemon, pokemonadv):
+    pokemon.hp = pokemon.hp - (pokemonadv.ataque * (100 / (100 + pokemon.defesa)))
+    return vidaUsuario(pokemon.hp)
 
 def vidaUsuario(hp):
     if hp <= 0:
