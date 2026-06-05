@@ -1,7 +1,6 @@
 import time
 import random
 
-from systems import user_input
 from systems import battle
 
 class Pokemon:
@@ -55,55 +54,14 @@ while True:
     print(f'Round {cont}:')
     time.sleep(1)
     if pokemon.velocidade > pokemonadv.velocidade:
-        if not user_input.confirmar_ataque('O seu Pokémon ataca primeiro! Deseja continuar? (S/N) '):
-            print('\033[32mBatalha encerrada.\033[m')
-            break
-        time.sleep(1)
-        vivo = battle.ataque_jogador(pokemon, pokemonadv)
-        if not vivo:
-            break
-        print('O Pokémon inimigo te ataca!')
-        time.sleep(1)
-        vivo = battle.ataque_inimigo(pokemon, pokemonadv)
-        if not vivo:
-            break
+        vivo = battle.turno_usuario_primeiro(pokemon, pokemonadv)
     elif pokemonadv.velocidade > pokemon.velocidade:
-        print('O Pokémon inimigo ataca primeiro!')
-        time.sleep(1)
-        vivo = battle.ataque_inimigo(pokemon, pokemonadv)
-        if not vivo:
-            break
-        if not user_input.confirmar_ataque('O seu Pokémon ataca! Deseja continuar? (S/N) '):
-            print('\033[32mBatalha encerrada.\033[m')
-            break
-        vivo = battle.ataque_jogador(pokemon, pokemonadv)
-        if not vivo:
-            break
+        vivo = battle.turno_adversario_primeiro(pokemon, pokemonadv)
     elif pokemon.velocidade == pokemonadv.velocidade:
-        n = random.randint(1, 2)
-        if n == 1:
-            if not user_input.confirmar_ataque('O seu Pokémon ataca primeiro! Deseja continuar? (S/N) '):
-                print('\033[32mBatalha encerrada.\033[m')
-                break
-            time.sleep(1)
-            vivo = battle.ataque_jogador(pokemon, pokemonadv)
-            if not vivo:
-                break
-            print('O Pokémon inimigo te ataca!')
-            time.sleep(1)
-            vivo = battle.ataque_inimigo(pokemon, pokemonadv)
-            if not vivo:
-                break
+        if random.randint(1, 2) == 1:
+            vivo = battle.turno_usuario_primeiro(pokemon, pokemonadv)
         else:
-            print('O Pokémon inimigo ataca primeiro!')
-            time.sleep(1)
-            vivo = battle.ataque_inimigo(pokemon, pokemonadv)
-            if not vivo:
-                break
-            if not user_input.confirmar_ataque('O seu Pokémon ataca! Deseja continuar? (S/N) '):
-                print('\033[32mBatalha encerrada.\033[m')
-                break
-            vivo = battle.ataque_jogador(pokemon, pokemonadv)
-            if not vivo:
-                break
+            vivo = battle.turno_adversario_primeiro(pokemon, pokemonadv)
+    if not vivo:
+        break
     cont += 1
