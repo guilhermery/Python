@@ -1,7 +1,9 @@
 import time
 import random
 
+from systems import user_input
 from systems import battle
+
 class Pokemon:
     def __init__(self, nome, ataque, defesa, velocidade, hp):
         self.nome = nome
@@ -53,7 +55,7 @@ while True:
     print(f'Round {cont}:')
     time.sleep(1)
     if pokemon.velocidade > pokemonadv.velocidade:
-        if not battle.confirmar_ataque('O seu Pokémon ataca primeiro! Deseja continuar? (S/N) '):
+        if not user_input.confirmar_ataque('O seu Pokémon ataca primeiro! Deseja continuar? (S/N) '):
             print('\033[32mBatalha encerrada.\033[m')
             break
         time.sleep(1)
@@ -71,7 +73,7 @@ while True:
         vivo = battle.ataque_inimigo(pokemon, pokemonadv)
         if not vivo:
             break
-        if not battle.confirmar_ataque('O seu Pokémon ataca! Deseja continuar? (S/N) '):
+        if not user_input.confirmar_ataque('O seu Pokémon ataca! Deseja continuar? (S/N) '):
             print('\033[32mBatalha encerrada.\033[m')
             break
         vivo = battle.ataque_jogador(pokemon, pokemonadv)
@@ -80,7 +82,7 @@ while True:
     elif pokemon.velocidade == pokemonadv.velocidade:
         n = random.randint(1, 2)
         if n == 1:
-            if not battle.confirmar_ataque('O seu Pokémon ataca primeiro! Deseja continuar? (S/N) '):
+            if not user_input.confirmar_ataque('O seu Pokémon ataca primeiro! Deseja continuar? (S/N) '):
                 print('\033[32mBatalha encerrada.\033[m')
                 break
             time.sleep(1)
@@ -98,7 +100,7 @@ while True:
             vivo = battle.ataque_inimigo(pokemon, pokemonadv)
             if not vivo:
                 break
-            if not battle.confirmar_ataque('O seu Pokémon ataca! Deseja continuar? (S/N) '):
+            if not user_input.confirmar_ataque('O seu Pokémon ataca! Deseja continuar? (S/N) '):
                 print('\033[32mBatalha encerrada.\033[m')
                 break
             vivo = battle.ataque_jogador(pokemon, pokemonadv)
