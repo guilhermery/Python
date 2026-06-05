@@ -1,13 +1,13 @@
 import time
 def ataque_jogador(pokemon, pokemonadv):
     pokemonadv.hp = pokemonadv.hp - (pokemon.ataque * (100 / (100 + pokemonadv.defesa)))
-    return vidaInimigo(pokemonadv.hp)
+    return vida_inimigo(pokemonadv.hp)
 
 def ataque_inimigo(pokemon, pokemonadv):
     pokemon.hp = pokemon.hp - (pokemonadv.ataque * (100 / (100 + pokemon.defesa)))
-    return vidaUsuario(pokemon.hp)
+    return vida_usuario(pokemon.hp)
 
-def vidaUsuario(hp):
+def vida_usuario(hp):
     if hp <= 0:
         print('O hp do seu Pokémon desceu para 0.')
         print('O seu Pokémon desmaiou! Você perdeu.')
@@ -18,7 +18,7 @@ def vidaUsuario(hp):
         time.sleep(1)
         return True
 
-def vidaInimigo(hp):
+def vida_inimigo(hp):
     if hp <= 0:
         print('O hp do inimigo desceu para 0.')
         print('O Pokémon inimigo desmaiou! Você venceu. Parabens!!')
