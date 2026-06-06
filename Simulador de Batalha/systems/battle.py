@@ -1,5 +1,8 @@
 import time
+import random
+
 from . import user_input
+
 def ataque_jogador(pokemon, pokemonadv):
     pokemonadv.hp = pokemonadv.hp - (pokemon.ataque * (100 / (100 + pokemonadv.defesa)))
     return vida_inimigo(pokemonadv.hp)
@@ -57,4 +60,11 @@ def turno_adversario_primeiro(pokemonadv, pokemon):
     vivo = ataque_jogador(pokemon, pokemonadv)
     if not vivo:
         return False
+    return vivo
+
+def turno_velocidades_iguais(pokemon, pokemonadv):
+    if random.randint(1, 2) == 1:
+        vivo = turno_usuario_primeiro(pokemon, pokemonadv)
+    else:
+        vivo = turno_adversario_primeiro(pokemon, pokemonadv)
     return vivo

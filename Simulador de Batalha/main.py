@@ -41,10 +41,7 @@ while True:
     elif pokemonadv.velocidade > pokemon.velocidade:
         vivo = battle.turno_adversario_primeiro(pokemon, pokemonadv)
     elif pokemon.velocidade == pokemonadv.velocidade:
-        if random.randint(1, 2) == 1:
-            vivo = battle.turno_usuario_primeiro(pokemon, pokemonadv)
-        else:
-            vivo = battle.turno_adversario_primeiro(pokemon, pokemonadv)
+        vivo = battle.turno_velocidades_iguais(pokemon, pokemonadv)
     if not vivo:
         break
     cont += 1
