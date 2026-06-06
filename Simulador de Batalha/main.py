@@ -1,16 +1,15 @@
-import time
 import random
 
 from systems import battle
 from systems.pokemon import Pokemon
 
-Bulbasauro = Pokemon("Bulbasauro", 6, 6, 5, 30.0)
-Charmander = Pokemon("Charmander", 9, 3, 7, 25.0)
-Squirtle = Pokemon("Squirtle", 4, 9, 3, 40.0)
+bulbasauro = Pokemon("Bulbasauro", 6, 6, 5, 30.0)
+charmander = Pokemon("Charmander", 9, 3, 7, 25.0)
+squirtle = Pokemon("Squirtle", 4, 9, 3, 40.0)
 pokemons = {
-    'Charmander': Charmander,
-    'Squirtle': Squirtle,
-    'Bulbasauro': Bulbasauro
+    'Charmander': charmander,
+    'Squirtle': squirtle,
+    'Bulbasauro': bulbasauro
 }
 espacamento = '---------------------------------------------------------'
 cont = 1
@@ -32,16 +31,4 @@ print(espacamento)
 pokemonadv = pokemons[random.choice(list(pokemons.keys()))].copy()
 print(f'Adversário escolheu {pokemonadv.nome}')
 print(espacamento)
-print('Início de Batalha')
-while True:
-    print(f'Round {cont}:')
-    time.sleep(1)
-    if pokemon.velocidade > pokemonadv.velocidade:
-        vivo = battle.turno_usuario_primeiro(pokemon, pokemonadv)
-    elif pokemonadv.velocidade > pokemon.velocidade:
-        vivo = battle.turno_adversario_primeiro(pokemon, pokemonadv)
-    elif pokemon.velocidade == pokemonadv.velocidade:
-        vivo = battle.turno_velocidades_iguais(pokemon, pokemonadv)
-    if not vivo:
-        break
-    cont += 1
+battle.batalhar(pokemon, pokemonadv)

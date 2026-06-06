@@ -68,3 +68,20 @@ def turno_velocidades_iguais(pokemon, pokemonadv):
     else:
         vivo = turno_adversario_primeiro(pokemon, pokemonadv)
     return vivo
+
+def batalhar(pokemon, pokemonadv):
+    cont = 1
+    vivo = True
+    print('Início de Batalha')
+    while True:
+        print(f'Round {cont}:')
+        time.sleep(1)
+        if pokemon.velocidade > pokemonadv.velocidade:
+            vivo = turno_usuario_primeiro(pokemon, pokemonadv)
+        elif pokemonadv.velocidade > pokemon.velocidade:
+            vivo = turno_adversario_primeiro(pokemon, pokemonadv)
+        elif pokemon.velocidade == pokemonadv.velocidade:
+            vivo = turno_velocidades_iguais(pokemon, pokemonadv)
+        if not vivo:
+            break
+        cont += 1
