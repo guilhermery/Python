@@ -20,7 +20,6 @@ class Pokemon:
             self.hp
         )
 
-escolhas = ['Bulbasauro', 'Charmander', 'Squirtle']
 Bulbasauro = Pokemon("Bulbasauro", 6, 6, 5, 30.0)
 Charmander = Pokemon("Charmander", 9, 3, 7, 25.0)
 Squirtle = Pokemon("Squirtle", 4, 9, 3, 40.0)
@@ -40,13 +39,13 @@ print('\033[32mBulbasauro\033[m')
 print(espacamento)
 while True:
     pokemon = input('Qual você deseja? ')
-    if pokemon in escolhas:
+    if pokemon in pokemons:
         pokemon = pokemons[pokemon].copy()
         break
     else:
         print('Escolha um Pokémon válido!')
 print(espacamento)
-pokemonadv = pokemons[random.choice(escolhas)].copy()
+pokemonadv = pokemons[random.choice(list(pokemons.keys()))].copy()
 print(f'Adversário escolheu {pokemonadv.nome}')
 print(espacamento)
 print('Início de Batalha')
