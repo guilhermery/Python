@@ -2,23 +2,7 @@ import time
 import random
 
 from systems import battle
-
-class Pokemon:
-    def __init__(self, nome, ataque, defesa, velocidade, hp):
-        self.nome = nome
-        self.ataque = ataque
-        self.defesa = defesa
-        self.velocidade = velocidade
-        self.hp = hp
-
-    def copy(self):
-        return Pokemon(
-            self.nome,
-            self.ataque,
-            self.defesa,
-            self.velocidade,
-            self.hp
-        )
+from systems.pokemon import Pokemon
 
 Bulbasauro = Pokemon("Bulbasauro", 6, 6, 5, 30.0)
 Charmander = Pokemon("Charmander", 9, 3, 7, 25.0)
