@@ -3,3 +3,4 @@ testeignorar.txt
 .venv
 .idea
 EstudoDSA/
+__pycache__/
