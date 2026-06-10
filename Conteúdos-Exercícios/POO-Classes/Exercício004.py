@@ -19,10 +19,18 @@ class Digimon:
     
     def __str__(self):
         return f'O {self.nome} possui {self.vida} de vida e {self.forca} de força.'
+
+    def __getstate__(self):
+        return f'Estado nome: {self.nome}. Vida: {self.vida}'
     
 gaomon = Digimon('Gaomon', 300, 50)
+agumon = Digimon('Agumon', 350, 45)
 gaomon.atacar()
 gaomon.dormir()
 gaomon.brincar()
-print(gaomon.__doc__)
 print(gaomon)
+print(agumon)
+print(gaomon.__dict__) #Atributo
+print(gaomon.__getstate__()) #Metodo
+print(gaomon.__class__) #Atributo
+print(gaomon.__doc__)
