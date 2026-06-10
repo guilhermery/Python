@@ -5,7 +5,6 @@ class Churrasco:
     def __init__(self, titulo, quant):
         self.titulo = titulo
         self.quant = quant
-        precokg = 82.40
 
     def analisar(self):
         print(Panel(
