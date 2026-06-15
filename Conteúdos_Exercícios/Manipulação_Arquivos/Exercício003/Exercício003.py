@@ -15,7 +15,7 @@ with open(pasta_atual/"livros.json", "r", encoding="utf-8") as arquivo:
 for livro in livros:
     # Para imprimir cada livro por vez da forma que eu escolher.
     if livro["em_estoque"]:
-        print(f"{livro["titulo"]} custa R${livro["preco"]:.2f}")
+        print(f"{livro['titulo']} custa R${livro['preco']:.2f}")
 
 print("\n")
 
@@ -42,6 +42,6 @@ texto_json = json.dumps(dados_livro, ensure_ascii=False)
 print(type(texto_json)) # Retorna tipo string
 
 # String JSON → Python
-texto_json = json.loads(texto_json)
+objeto_python = json.loads(texto_json)
 
-print(type(texto_json)) # Retorna tipo dict
+print(type(objeto_python)) # Retorna tipo dict
