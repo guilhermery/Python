@@ -1,0 +1,4 @@
+Linha 01: TEXTO NOVO 002
+Linha 02: Como ler linhas 
+Linha 03: Como ler blocos específicos
+Linha 04: Em Python
