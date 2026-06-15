@@ -1,0 +1,23 @@
+[
+    {
+        "id": 1,
+        "titulo": "O Senhor dos Aneis",
+        "autor": "J.R.R. Tolkien",
+        "preco": 59.9,
+        "em_estoque": true
+    },
+    {
+        "id": 2,
+        "titulo": "Cidade dos Ossos",
+        "autor": "Cassandra Clare",
+        "preco": 39.9,
+        "em_estoque": false
+    },
+    {
+        "id": 3,
+        "titulo": "Percy Jackson e o Mar de Monstros",
+        "autor": "Rick Riordan",
+        "preco": 29.9,
+        "em_estoque": true
+    }
+]
