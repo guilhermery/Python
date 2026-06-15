@@ -6,7 +6,7 @@ pasta_atual = Path(__file__).parent
 
 with open(pasta_atual/"livros.json", "r", encoding="utf-8") as arquivo:
     # Para ler um arquivo json como objeto Python (lista ou dicionário)
-    livros = json.load(arquivo)
+    livros = json.load(arquivo) # Arquivo JSON → Python
     # print(livros) #Imprime o objeto como um todo
     # print(type(livros)) #Mostra o tipo do objeto lido
     # print(livros[0]) #Imprime as informações do primeiro livro da lista
@@ -32,6 +32,7 @@ livros.append(novo_livro)
 print(livros)
 
 with open(pasta_atual/"livros_att.json", "w", encoding="utf-8") as arquivo:
+    # Python → Arquivo JSON
     json.dump(livros, arquivo, indent=4, ensure_ascii=False) # Ensure_ascii para acentuação
 
 dados_livro = {"id": 4, "titulo": "Magnus Chase", "autor": "Rick Riordan", "preco": 29.90, "em_estoque": True}
