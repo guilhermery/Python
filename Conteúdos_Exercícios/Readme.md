@@ -164,6 +164,60 @@ Tratamento de erros e exceções:
 
 ---
 
+## 🎨 Biblioteca Rich
+Utilização da biblioteca Rich para melhorar a visualização de aplicações no terminal através de:
+- cores e estilos
+- emojis
+- painéis
+- tabelas
+- inspeção de objetos
+- rastreamento de erros
+
+🔗 [Acessar conteúdo](./Biblioteca_Rich/Readme.md)
+
+---
+
+## ⚡ Lambda e Yield
+Estudos sobre recursos avançados da linguagem para criação de código mais conciso e eficiente:
+- funções lambda
+- map e filter
+- generators
+- yield
+- geração sob demanda de valores
+- iteração eficiente
+
+🔗 [Acessar conteúdo](./Lambda_Yield/Readme.md)
+
+---
+
+## 🏗️ POO - Classes
+Primeiros estudos sobre Programação Orientada a Objetos utilizando:
+- classes
+- objetos
+- atributos
+- métodos
+- construtores
+- encapsulamento
+- métodos especiais
+- modelagem de sistemas
+
+🔗 [Acessar conteúdo](./POO_Classes/Readme.md)
+
+---
+
+## 🧬 POO - Herança e Polimorfismo
+Aprofundamento dos conceitos de Programação Orientada a Objetos através de:
+- herança
+- polimorfismo
+- sobrescrita de métodos
+- classes abstratas
+- encapsulamento
+- propriedades (`@property`)
+- getters e setters
+- abstração
+
+🔗 [Acessar conteúdo](./POO_Herança_Polimorfismo/Readme.md)
+
 # Observações
 Os exercícios foram desenvolvidos com foco em prática e aprendizado progressivo da linguagem Python.  
 Grande parte deles possui comentários explicando o funcionamento do código e os conceitos utilizados em cada etapa.
