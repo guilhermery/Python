@@ -20,7 +20,7 @@ Essa etapa foi importante para entender como organizar projetos em módulos e pa
 
 # Exercício 001
 
-[Ver código](./Exercício001.py)
+[Ver código](./Exercício001/Exercício001.py)
 
 ## Objetivo
 Aprender a importar módulos personalizados.
@@ -57,7 +57,7 @@ Esse exercício ajudou no aprendizado de:
 
 # Exercício 002
 
-[Ver código](./Exercício002.py)
+[Ver código](./Exercício002/Exercício002.py)
 
 ## Objetivo
 Criar um módulo para cálculos monetários.
@@ -95,7 +95,7 @@ Esse exercício ajudou no aprendizado de:
 
 # Exercício 003
 
-[Ver código](./Exercício003.py)
+[Ver código](./Exercício003/Exercício003.py)
 
 ## Objetivo
 Formatar valores monetários.
@@ -132,7 +132,7 @@ Esse exercício ajudou no aprendizado de:
 
 # Exercício 004
 
-[Ver código](./Exercício004.py)
+[Ver código](./Exercício004/Exercício004.py)
 
 ## Objetivo
 Utilizar parâmetros opcionais em funções.
@@ -166,7 +166,7 @@ Esse exercício ajudou no aprendizado de:
 
 # Exercício 005
 
-[Ver código](./Exercício005.py)
+[Ver código](./Exercício005/Exercício005.py)
 
 ## Objetivo
 Criar um resumo financeiro completo.
@@ -200,7 +200,7 @@ Esse exercício ajudou no aprendizado de:
 
 # Exercício 006
 
-[Ver código](./Exercício006.py)
+[Ver código](./Exercício006/Exercício006.py)
 
 ## Objetivo
 Trabalhar com pacotes em Python.
